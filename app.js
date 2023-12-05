@@ -96,7 +96,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Fetch products when the page loads
 
 
     fetchProducts('https://dummyjson.com/products?limit=100');
