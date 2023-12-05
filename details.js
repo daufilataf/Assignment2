@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                 <h3 class="product-stock" style="color: ${stock < 50 ? 'red' : 'inherit'};">Stock: ${stock}</h3>
             </div>
         </div>`;
+        document.title = product.title;
 
         const currentProductCategory = product.category; // Replace this with the actual property name
 
