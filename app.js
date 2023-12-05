@@ -103,16 +103,18 @@ document.addEventListener('DOMContentLoaded', function () {
         const filteredProducts = productsData.filter(product => {
             const matchesKeyword = (
                 product.title.toLowerCase().includes(keyword.toLowerCase()) ||
-                product.description.toLowerCase().includes(keyword.toLowerCase())
+                product.description.toLowerCase().includes(keyword.toLowerCase()) ||
+                product.brand.toLowerCase().includes(keyword.toLowerCase()) ||
+                product.category.toLowerCase().includes(keyword.toLowerCase())
             );
-
+    
             const matchesCategory = (selectedCategory === 'all' || product.category === selectedCategory);
-
+    
             return matchesKeyword && matchesCategory;
         });
         return filteredProducts;
     }
-
+    
     // Search input event listener
  searchInput.addEventListener('input', function (event) {
         const keyword = event.target.value.trim();
