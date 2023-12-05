@@ -1,0 +1,238 @@
+/* styles.css */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Input and Button Styles */
+input[type="text"],
+button {
+    padding: 8px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Filter Section Styles */
+.filter-section {
+    margin-bottom: 20px;
+}
+
+/* Product Styles */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust the minmax width as needed */
+    gap: 20px; /* Add a gap between products */
+}
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    height: 100%; /* Ensure all .product divs have the same height */
+    align-items: center;
+    text-align: center;
+    position: relative; /* Needed for absolute positioning */
+}
+
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    display: block;
+    width: 100%; /* Ensure all images take the full width of the container */
+    height: 200px; /* Set a fixed height for all images */
+    object-fit: cover; /* Maintain aspect ratio for images */
+    border-radius: 8px 8px 0 0; /* Rounded corners on the top only */
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.product p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+/* Pagination Styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 8px 12px;
+    margin: 0 5px;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #007bff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+}
+
+.pagination button:hover,
+.pagination button.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.box {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    padding: 10px 20px;
+    align-items: center;
+}
+
+.box2:hover input {
+    width: 400px;
+    background: #fff;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    padding: 10px 20px;
+    align-items: center;
+}
+
+.box2 input {
+    width: 0;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    transition: 0.8s;
+    background: transparent;
+}
+
+.box2 a .fas {
+    color: #1daf;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.more-detail {
+    bottom: 10px; /* Adjust as needed */
+    left: 0;
+    right: 0;
+    margin: auto; /* Centers horizontally */
+    background: rgb(16, 8, 69);
+    width: 6rem;
+    height: 4rem;
+    font-weight: 500;
+    color: white;
+    border-radius: 1rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  
+    
+
+}
+
+
+.more-detail ion-icon {
+    font-size: 3rem;
+}
+
+/* Styling for select element */
+#category {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 16px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>'); /* Adds a custom arrow */
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    padding-right: 25px; /* Adjust the padding for the right arrow */
+    cursor: pointer;
+  }
+  
+  /* Styling for select dropdown options */
+  #category option {
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+  }
+
+.product-price{
+    color: red;
+    text-decoration:line-through;
+    font-size: 30px;
+}
+
+.product-final-price{
+    font-weight: bold;
+    font-size: 40px;
+    color: blue;
+}
+
+ul {
+    margin: 20px auto; /* Adjust top and bottom margin */
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li {
+    display: inline-block;
+    margin: 0 10px;
+    background: #ccc;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 45px;
+    cursor: pointer;
+}
+
+ul li.active {
+    color: #fff;
+    background-image: linear-gradient(#ff4568, #ff4568);
+    background-repeat: no-repeat;
+}
